@@ -41,11 +41,11 @@ void HttpServer::acceptor() {
 void HttpServer::handler() {
     // do stuff with buffer
     std::cout << buffer << '\n';
-    response_ = "Hello World!";
+    response_ = "HTTP/1.1 200 OK\nContent-Type: text/plain\nContent- Length: 12\n\nHello world!";
 }
 
 void HttpServer::responder() {
-    write(conn_, response_, strlen(response_));
+    write(conn_, response_.c_str(), strlen(response_.c_str()));
     close(conn_);
 }
 

@@ -2,6 +2,7 @@
 #define HTTP_SERVER_HPP
 
 #include "simple_server.hpp"
+#include <string>
 
 namespace pweb {
 
@@ -10,7 +11,7 @@ private:
     // connection between client and server
     int conn_;
     char buffer[30000];
-    char* response_;
+    std::string response_;
 
     void acceptor() override;
     void handler() override;
