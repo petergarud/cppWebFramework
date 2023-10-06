@@ -10,19 +10,20 @@ protected:
     ListeningSocket* sock_;
 
     // accept requests
-    virtual void accepter() = 0;
+    virtual void acceptor() = 0;
     // handle requests
     virtual void handler() = 0;
     // respond to requests
     virtual void responder() = 0;
+    void test_connection(int);
 public:
-  SimpleServer(int domain, int type, int protocol, int port,
+    SimpleServer(int domain, int type, int protocol, int port,
                unsigned long ip_address, int bklg);
 
-  virtual ~SimpleServer();
+    virtual ~SimpleServer();
 
-  // launch server
-  virtual void launch() = 0;
+    // launch server
+    virtual void launch() = 0;
 };
 
 } // end namespace pweb

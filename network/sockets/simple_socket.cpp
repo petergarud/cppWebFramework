@@ -26,12 +26,12 @@ void SimpleSocket::test_connection(int item_to_test) {
 }
 
 // Getter functions
-// int SimpleSocket::get_sock() {
-//     return sock_;
-// }
-// sockaddr_in SimpleSocket::get_address() {
-//     return address_;
-// }
+int SimpleSocket::get_sock() {
+    return sock_;
+}
+sockaddr_in SimpleSocket::get_address() {
+    return address_;
+}
 // int SimpleSocket::get_connection() {
 //     return connection_;
 // }

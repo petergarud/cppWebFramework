@@ -4,6 +4,7 @@ namespace pweb {
 
 ListeningSocket::ListeningSocket(int domain, int type, int protocol, int port, unsigned long ip_address, int bklg) 
 : BindingSocket(domain, type, protocol, port, ip_address), backlog_(bklg) {
+    std::cout << "============Initiated connection at " << ip_address << " at port " << port << "=======================\n";
     listen_id_ = start_listening();
     test_connection(listen_id_);
 }

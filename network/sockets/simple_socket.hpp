@@ -36,8 +36,8 @@ public:
     void test_connection(int);
 
     // Getter functions
-    // int get_sock();
-    // sockaddr_in get_address();
+    int get_sock();
+    sockaddr_in get_address();
     // int get_connection();
 };
 
