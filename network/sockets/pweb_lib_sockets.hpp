@@ -1,5 +1,5 @@
-#ifndef S_HPP
-#define S_HPP
+#ifndef PWEB_LIB_SOCKETS_HPP
+#define PWEB_LIB_SOCKETS_HPP
 
 #include "simple_socket.hpp"
 #include "binding_socket.hpp"
