@@ -97,17 +97,35 @@ src/clean: src/network/clean
 # Recursive "all" directory target.
 src/network/all: src/network/servers/all
 src/network/all: src/network/sockets/all
+src/network/all: src/network/apis/all
 .PHONY : src/network/all
 
 # Recursive "preinstall" directory target.
 src/network/preinstall: src/network/servers/preinstall
 src/network/preinstall: src/network/sockets/preinstall
+src/network/preinstall: src/network/apis/preinstall
 .PHONY : src/network/preinstall
 
 # Recursive "clean" directory target.
 src/network/clean: src/network/servers/clean
 src/network/clean: src/network/sockets/clean
+src/network/clean: src/network/apis/clean
 .PHONY : src/network/clean
+
+#=============================================================================
+# Directory level rules for directory src/network/apis
+
+# Recursive "all" directory target.
+src/network/apis/all: src/network/apis/CMakeFiles/apis.dir/all
+.PHONY : src/network/apis/all
+
+# Recursive "preinstall" directory target.
+src/network/apis/preinstall:
+.PHONY : src/network/apis/preinstall
+
+# Recursive "clean" directory target.
+src/network/apis/clean: src/network/apis/CMakeFiles/apis.dir/clean
+.PHONY : src/network/apis/clean
 
 #=============================================================================
 # Directory level rules for directory src/network/servers
@@ -145,14 +163,15 @@ src/network/sockets/clean: src/network/sockets/CMakeFiles/sockets.dir/clean
 # All Build rule for target.
 CMakeFiles/webFramework.dir/all: src/network/servers/CMakeFiles/servers.dir/all
 CMakeFiles/webFramework.dir/all: src/network/sockets/CMakeFiles/sockets.dir/all
+CMakeFiles/webFramework.dir/all: src/network/apis/CMakeFiles/apis.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/webFramework.dir/build.make CMakeFiles/webFramework.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/webFramework.dir/build.make CMakeFiles/webFramework.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build/CMakeFiles --progress-num=9,10 "Built target webFramework"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build/CMakeFiles --progress-num=11,12 "Built target webFramework"
 .PHONY : CMakeFiles/webFramework.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/webFramework.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build/CMakeFiles 12
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/webFramework.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build/CMakeFiles 0
 .PHONY : CMakeFiles/webFramework.dir/rule
@@ -173,7 +192,7 @@ CMakeFiles/webFramework.dir/clean:
 src/network/servers/CMakeFiles/servers.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/network/servers/CMakeFiles/servers.dir/build.make src/network/servers/CMakeFiles/servers.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/network/servers/CMakeFiles/servers.dir/build.make src/network/servers/CMakeFiles/servers.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build/CMakeFiles --progress-num=1,2,3 "Built target servers"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build/CMakeFiles --progress-num=3,4,5 "Built target servers"
 .PHONY : src/network/servers/CMakeFiles/servers.dir/all
 
 # Build rule for subdir invocation for target.
@@ -199,7 +218,7 @@ src/network/servers/CMakeFiles/servers.dir/clean:
 src/network/sockets/CMakeFiles/sockets.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/network/sockets/CMakeFiles/sockets.dir/build.make src/network/sockets/CMakeFiles/sockets.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/network/sockets/CMakeFiles/sockets.dir/build.make src/network/sockets/CMakeFiles/sockets.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build/CMakeFiles --progress-num=4,5,6,7,8 "Built target sockets"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build/CMakeFiles --progress-num=6,7,8,9,10 "Built target sockets"
 .PHONY : src/network/sockets/CMakeFiles/sockets.dir/all
 
 # Build rule for subdir invocation for target.
@@ -217,6 +236,32 @@ sockets: src/network/sockets/CMakeFiles/sockets.dir/rule
 src/network/sockets/CMakeFiles/sockets.dir/clean:
 	$(MAKE) $(MAKESILENT) -f src/network/sockets/CMakeFiles/sockets.dir/build.make src/network/sockets/CMakeFiles/sockets.dir/clean
 .PHONY : src/network/sockets/CMakeFiles/sockets.dir/clean
+
+#=============================================================================
+# Target rules for target src/network/apis/CMakeFiles/apis.dir
+
+# All Build rule for target.
+src/network/apis/CMakeFiles/apis.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/network/apis/CMakeFiles/apis.dir/build.make src/network/apis/CMakeFiles/apis.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/network/apis/CMakeFiles/apis.dir/build.make src/network/apis/CMakeFiles/apis.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build/CMakeFiles --progress-num=1,2 "Built target apis"
+.PHONY : src/network/apis/CMakeFiles/apis.dir/all
+
+# Build rule for subdir invocation for target.
+src/network/apis/CMakeFiles/apis.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/network/apis/CMakeFiles/apis.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build/CMakeFiles 0
+.PHONY : src/network/apis/CMakeFiles/apis.dir/rule
+
+# Convenience name for target.
+apis: src/network/apis/CMakeFiles/apis.dir/rule
+.PHONY : apis
+
+# clean rule for target.
+src/network/apis/CMakeFiles/apis.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/network/apis/CMakeFiles/apis.dir/build.make src/network/apis/CMakeFiles/apis.dir/clean
+.PHONY : src/network/apis/CMakeFiles/apis.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

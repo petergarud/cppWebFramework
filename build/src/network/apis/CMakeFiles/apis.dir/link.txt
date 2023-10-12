@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libapis.a CMakeFiles/apis.dir/base_api.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libapis.a

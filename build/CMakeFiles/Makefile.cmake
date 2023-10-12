@@ -13,6 +13,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.27.4/CMakeSystem.cmake"
   "/Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/src/CMakeLists.txt"
   "/Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/src/network/CMakeLists.txt"
+  "/Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/src/network/apis/CMakeLists.txt"
   "/Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/src/network/servers/CMakeLists.txt"
   "/Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/src/network/sockets/CMakeLists.txt"
   "/opt/homebrew/Cellar/cmake/3.27.4/share/cmake/Modules/CMakeCInformation.cmake"
@@ -51,6 +52,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "src/network/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/network/servers/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/network/sockets/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/network/apis/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -58,4 +60,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/webFramework.dir/DependInfo.cmake"
   "src/network/servers/CMakeFiles/servers.dir/DependInfo.cmake"
   "src/network/sockets/CMakeFiles/sockets.dir/DependInfo.cmake"
+  "src/network/apis/CMakeFiles/apis.dir/DependInfo.cmake"
   )

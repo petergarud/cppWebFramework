@@ -1,4 +1,4 @@
-# Install script for directory: /Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/src/network
+# Install script for directory: /Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/src/network/apis
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,20 +35,5 @@ endif()
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/Library/Developer/CommandLineTools/usr/bin/objdump")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build/src/network/servers/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build/src/network/sockets/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build/src/network/apis/cmake_install.cmake")
 endif()
 

@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build/CMakeFiles /Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build/CMakeFiles /Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build/src/network/apis//CMakeFiles/progress.marks
+	cd /Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/network/apis/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/network/apis/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,94 +103,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/network/apis/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/network/apis/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named webFramework
+# Convenience name for target.
+src/network/apis/CMakeFiles/apis.dir/rule:
+	cd /Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/network/apis/CMakeFiles/apis.dir/rule
+.PHONY : src/network/apis/CMakeFiles/apis.dir/rule
 
-# Build rule for target.
-webFramework: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 webFramework
-.PHONY : webFramework
-
-# fast build rule for target.
-webFramework/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/webFramework.dir/build.make CMakeFiles/webFramework.dir/build
-.PHONY : webFramework/fast
-
-#=============================================================================
-# Target rules for targets named servers
-
-# Build rule for target.
-servers: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 servers
-.PHONY : servers
-
-# fast build rule for target.
-servers/fast:
-	$(MAKE) $(MAKESILENT) -f src/network/servers/CMakeFiles/servers.dir/build.make src/network/servers/CMakeFiles/servers.dir/build
-.PHONY : servers/fast
-
-#=============================================================================
-# Target rules for targets named sockets
-
-# Build rule for target.
-sockets: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sockets
-.PHONY : sockets
-
-# fast build rule for target.
-sockets/fast:
-	$(MAKE) $(MAKESILENT) -f src/network/sockets/CMakeFiles/sockets.dir/build.make src/network/sockets/CMakeFiles/sockets.dir/build
-.PHONY : sockets/fast
-
-#=============================================================================
-# Target rules for targets named apis
-
-# Build rule for target.
-apis: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 apis
+# Convenience name for target.
+apis: src/network/apis/CMakeFiles/apis.dir/rule
 .PHONY : apis
 
 # fast build rule for target.
 apis/fast:
-	$(MAKE) $(MAKESILENT) -f src/network/apis/CMakeFiles/apis.dir/build.make src/network/apis/CMakeFiles/apis.dir/build
+	cd /Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build && $(MAKE) $(MAKESILENT) -f src/network/apis/CMakeFiles/apis.dir/build.make src/network/apis/CMakeFiles/apis.dir/build
 .PHONY : apis/fast
 
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
+base_api.o: base_api.cpp.o
+.PHONY : base_api.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/webFramework.dir/build.make CMakeFiles/webFramework.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+base_api.cpp.o:
+	cd /Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build && $(MAKE) $(MAKESILENT) -f src/network/apis/CMakeFiles/apis.dir/build.make src/network/apis/CMakeFiles/apis.dir/base_api.cpp.o
+.PHONY : base_api.cpp.o
 
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
+base_api.i: base_api.cpp.i
+.PHONY : base_api.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/webFramework.dir/build.make CMakeFiles/webFramework.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+base_api.cpp.i:
+	cd /Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build && $(MAKE) $(MAKESILENT) -f src/network/apis/CMakeFiles/apis.dir/build.make src/network/apis/CMakeFiles/apis.dir/base_api.cpp.i
+.PHONY : base_api.cpp.i
 
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
+base_api.s: base_api.cpp.s
+.PHONY : base_api.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/webFramework.dir/build.make CMakeFiles/webFramework.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+base_api.cpp.s:
+	cd /Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build && $(MAKE) $(MAKESILENT) -f src/network/apis/CMakeFiles/apis.dir/build.make src/network/apis/CMakeFiles/apis.dir/base_api.cpp.s
+.PHONY : base_api.cpp.s
 
 # Help Target
 help:
@@ -201,12 +163,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... apis"
-	@echo "... servers"
-	@echo "... sockets"
-	@echo "... webFramework"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... base_api.o"
+	@echo "... base_api.i"
+	@echo "... base_api.s"
 .PHONY : help
 
 
@@ -218,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

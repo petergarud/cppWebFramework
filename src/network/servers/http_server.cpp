@@ -10,6 +10,7 @@ HttpServer::HttpServer() : HttpServer(8080, INADDR_ANY, 10) { }
 
 HttpServer::HttpServer(int port, unsigned long ip_address, int bklg)
     : SimpleServer(AF_INET, SOCK_STREAM, 0, port, ip_address, bklg) {
+        files_["index.html"]  = "/Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/src/html/index.html";
 }
 
 void HttpServer::launch() {
@@ -41,12 +42,24 @@ void HttpServer::acceptor() {
 void HttpServer::handler() {
     // do stuff with buffer
     std::cout << buffer << '\n';
-    response_ = "HTTP/1.1 200 OK\nContent-Type: text/plain\nContent- Length: 12\n\nHello world!";
+    response_ = "HTTP/1.1 200 OK\nContent-Type: text/html\n\r\n\n";
+    file_.open(files_["index.html"], std::ios::in);
+
 }
 
 void HttpServer::responder() {
+    char ch;
+    while (true) {
+        file_ >> std::noskipws >> ch;
+        if (file_.eof()) break;
+        response_ += ch;
+    }
     write(conn_, response_.c_str(), strlen(response_.c_str()));
     close(conn_);
+}
+
+void HttpServer::addApi(std::string route, Api* api) {
+    routes_[route] = api;
 }
 
 } // end namespace pweb

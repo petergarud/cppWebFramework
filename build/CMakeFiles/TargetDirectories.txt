@@ -11,3 +11,6 @@
 /Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build/src/network/sockets/CMakeFiles/sockets.dir
 /Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build/src/network/sockets/CMakeFiles/edit_cache.dir
 /Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build/src/network/sockets/CMakeFiles/rebuild_cache.dir
+/Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build/src/network/apis/CMakeFiles/apis.dir
+/Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build/src/network/apis/CMakeFiles/edit_cache.dir
+/Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build/src/network/apis/CMakeFiles/rebuild_cache.dir

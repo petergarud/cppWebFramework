@@ -94,6 +94,7 @@ webFramework: CMakeFiles/webFramework.dir/src/main.cpp.o
 webFramework: CMakeFiles/webFramework.dir/build.make
 webFramework: src/network/servers/libservers.a
 webFramework: src/network/sockets/libsockets.a
+webFramework: src/network/apis/libapis.a
 webFramework: CMakeFiles/webFramework.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/petergarud/Documents/Personal/Development/Projects/cppWebFramework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable webFramework"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/webFramework.dir/link.txt --verbose=$(VERBOSE)
