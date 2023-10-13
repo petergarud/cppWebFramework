@@ -5,24 +5,28 @@
 #include <string>
 #include <fstream>
 #include <unordered_map>
+#include "../apis/pweb_lib_apis.hpp"
 
 namespace pweb {
-
-class Api;
 
 class HttpServer : public SimpleServer {
 private:
     // connection between client and server
     int conn_;
-    char buffer[30000];
+    std::string request_;
     std::string response_;
     std::fstream file_;
-    std::unordered_map<std::string, std::string> files_;
     std::unordered_map<std::string, Api*> routes_;
+    Api default_api_;
 
     void acceptor() override;
     void handler() override;
     void responder() override;
+    std::string retrieveMethod();
+    std::string retrievePath();
+    std::string retrieveBody();
+    Api* getApi(std::string path);
+    std::string getBasePath(std::string path);
 public:
     HttpServer();
     HttpServer(int port, unsigned long ip_address, int bklg);

@@ -2,22 +2,23 @@
 #define BASE_API
 
 #include <string>
-#include "../servers/pweb_lib_servers.hpp"
+#include <unordered_map>
 
 namespace pweb {
+
+class HttpServer;
 
 class Api {
 private:
     std::string base_route_;
     HttpServer* server_;
-public:
-    Api(std::string base_route, HttpServer& server)
-        : base_route_(base_route)
-        , server_(&server) {
-        server_->addApi(base_route_, this);
+    std::unordered_map<std::string, void (*)(std::string)> get_routes_;
 
-    }
+public:
+    Api();
+    Api(std::string base_route, HttpServer& server);
     virtual ~Api() = default;
+    virtual std::string processRequest(std::string method, std::string path, std::string request_body);
 };
 
 } // end namespace pweb
